@@ -35,7 +35,7 @@ tags:
 
 <p>async/await 코드는 두 가지 부분으로 나눠져있습니다.</p>
 
-<h3 id="The_async_keyword">비동기 키워드</h3>
+<h3 id="The_async_keyword">The async keyword</h3>
 
 <p>먼저 비동기 함수를 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async 함수</a>로 만들기 위하여 function()앞에 <code>async</code> 키워드를 추가합니다. async function()은 <code>await</code> 키워드가 비동기 코드를 호출할 수 있게 해주는 함수 입니다.</p>
 
@@ -76,7 +76,7 @@ hello();</pre>
 
 <p>정리하면, <code>async</code> 를 함수와 같이 사용하면 결과를 직접 반환하는게 아니라 Promise를 반환하게 합니다. 또한 동기식 함수는 <code>await</code>사용을 위한 지원과 함께 실행되는 잠재적인 오버헤드를 피할 수 있습니다. 함수가  <code>async</code>라고 선언될 때 필요한 핸들링만 추가하면 JavaScript엔진이 우리가 만든 프로그램을 최적화 할 수 있습니다. 끝내주죠?</p>
 
-<h3 id="The_await_keyword">비동기 키워드</h3>
+<h3 id="The_await_keyword">The await keyword</h3>
 
 <p>비동기 함수를 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a> 키워드와 함께 쓰면 그 장점이 확실히 보입니다. 이것은 어떠한 Promise기반 함수 앞에 놓을 수 있습니다. 그리고 우리의 코드의 Promise가 fulfil될 때 까지 잠시 중단하고, 결과를 반환합니다. 그리고 실행을 기다리는 다른 코드들을 중지시키지 않고 그대로 실행되게 합니다.</p>
 
@@ -127,7 +127,7 @@ myFetch()
 
 <p>바꾸고 나니 더 이해하기 쉬워졌습니다. — 더 이상의 <code>.then()</code> 블럭은 찾아 볼 수 없습니다.</p>
 
-<p><code>async</code> 키워드가 함수를 Promise로 바꾸었기, 이제 promise 와 await의 하이브리드 접근방식을 사용하기 위해 코드를 리팩토링 할 수 있으며, 두 번째 <code>.then()</code>블럭을 함수 내부의 블럭으로 가져와 더 유연하게 만들 수 있습니다.</p>
+<p><code>async</code> 키워드가 함수를 Promise로 바꾸었기 때문에, 이제 promise 와 await의 하이브리드 접근방식을 사용하기 위해 코드를 리팩토링 할 수 있으며, 두 번째 <code>.then()</code>블럭을 함수 내부의 블럭으로 가져와 더 유연하게 만들 수 있습니다.</p>
 
 <pre class="brush: js notranslate">async function myFetch() {
   let response = await fetch('coffee.jpg');
